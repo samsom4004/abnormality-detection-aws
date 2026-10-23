@@ -66,6 +66,8 @@ Using the real data: download the public **Kvasir-Capsule** dataset yourself, cr
 
 ## Deploy on AWS
 
+First time on AWS? Do the beginner guide in the sibling repository first (`income-imputation-aws/docs/FIRST_AWS_RUN.md`): account, login, Terraform, cleanup. The steps here are the same, with a GPU quota and the dataset upload added.
+
 1. `cd infra/terraform && terraform init && terraform apply -var-file=example.tfvars`
 2. Upload the dataset to `s3://<bucket>/kvasir-capsule/` (images + `manifest.csv`)
 3. `make package && python mlops/pipeline.py --role-arn <role> --bucket <bucket> --data-uri s3://<bucket>/kvasir-capsule/ --start`
