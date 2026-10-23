@@ -1,0 +1,10 @@
+.git
+.venv
+build
+artifacts
+data
+**/__pycache__
+*.jpg
+*.png
+*.csv
+*.pt

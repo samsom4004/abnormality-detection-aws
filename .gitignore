@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+# Data and models: never commit images, patient-related data or model weights
+data/
+artifacts/
+*.jpg
+*.jpeg
+*.png
+*.csv
+*.pt
+*.pth
+*.onnx
+*.h5
+*.tflite
+*.tar.gz
+.DS_Store
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!example.tfvars
+# Secrets
+.env
+*.pem
