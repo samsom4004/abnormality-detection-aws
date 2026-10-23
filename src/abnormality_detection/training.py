@@ -86,7 +86,7 @@ def fit(train_df, val_df, root: str, cfg: TrainConfig):
             loss = loss_fn(model(x), y)
             loss.backward()
             opt.step()
-            total += float(loss) * len(y)
+            total += float(loss.detach()) * len(y)
             n += len(y)
         z, y_val = predict_logits(model, vl, device)
         m = compute_metrics(y_val, softmax(z))
